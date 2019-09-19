@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
+import ProjectTaskItem from "./ProjectTask/ProjectTaskItem";
 //rcc
 class ProjectBoard extends Component {
     render() {
         return (
             <div className="container">
-                <a href="/ProjectTaskForm.html" className="btn btn-primary mb-3">
+                <Link to="/addProjectTask" className="btn btn-primary mb-3">
                     <i className="fas fa-plus-circle"> Create Project Task</i>
-                </a>
+                </Link>
                 <br/>
                 <hr/>
                 <div className="container">
@@ -18,25 +20,10 @@ class ProjectBoard extends Component {
                                 </div>
                             </div>
 
-                            <div className="card mb-1 bg-light">
+                        {/*    */}
+                        {/*//Project Task Start Here*/}
 
-                                <div className="card-header text-primary">
-                                    ID: projectSequence
-                                </div>
-                                <div className="card-body bg-light">
-                                    <h5 className="card-title">summary</h5>
-                                    <p className="card-text text-truncate ">
-                                        acceptanceCriteria
-                                    </p>
-                                    <a href="#" className="btn btn-primary">
-                                        View / Update
-                                    </a>
-
-                                    <button className="btn btn-danger ml-4">
-                                        Delete
-                                    </button>
-                                </div>
-                            </div>
+                            <ProjectTaskItem></ProjectTaskItem>
 
                         </div>
                         <div className="col-md-4">
@@ -45,7 +32,10 @@ class ProjectBoard extends Component {
                                     <h3>In Progress</h3>
                                 </div>
                             </div>
+                            {/*    */}
+                            {/*//Project Task Start Here*/}
 
+                            <ProjectTaskItem></ProjectTaskItem>
                         </div>
                         <div className="col-md-4">
                             <div className="card text-center mb-2">
